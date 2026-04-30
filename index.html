@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea N Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==================== PRELOADER ==================== -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <div>
+        <h1>TEA N <span>COFFEE</span></h1>
+        <p class="est">Est. 2024</p>
+    </div>
+</div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products, recipes...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <a href="#" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#cafe">Cafe</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== MOBILE MENU ==================== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cafe">Cafe</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600')">
+                <div class="hero-content">
+                    <h2>Welcome to Tea N Coffee</h2>
+                    <h1>Sip elegance. Taste warmth. Every cup</h1>
+                    <p>Where flavor meets elegance in every cup — since 2024.</p>
+                    <div class="hero-buttons">
+                        <a href="#cafe" class="btn-primary">Explore Cafe</a>
+                        <a href="#gifting" class="btn-secondary">Shop Gifts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-coffee"></i>
+                    <h3>Premium Coffee</h3>
+                    <p>Artisan roasted beans from around the world</p>
+                </div><div class="feature">
+                    <i class="fas fa-coffee"></i>
+                    <h3>Premium Tea</h3>
+                    <p>Chai that feels like home</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Natural Skincare</h3>
+                    <p>Organic beauty solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CAFE MENU SECTION ==================== -->
+    <section id="cafe" class="cafe">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Cafe Menu</h2>
+                <p>Discover our signature beverages and treats</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="all">All</button>
+                <button class="tab-btn" data-category="coffee">Coffee</button>
+                <button class="tab-btn" data-category="tea">Tea</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+            </div>
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BAKERY SECTION ==================== -->
+    <section id="bakery" class="bakery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fresh From The Bakery</h2>
+                <p>Artisanal breads, pastries, and cakes</p>
+            </div>
+            <div class="bakery-grid" id="bakeryGrid">
+                <!-- Bakery items will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER SECTION ==================== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive offers, recipes, and skincare tips directly in your inbox</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Lahore, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+92 339-9910001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>teancoffe100@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Mon - Sun: 9:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject">
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Tea N Coffee</h3>
+                    <p>Where flavor meets elegance in every cup — since 2024.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cafe">Cafe Menu</a></li>
+                        <li><a href="#bakery">Bakery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info-footer">
+                        <li><i class="fas fa-phone"></i> +92 339-9910001</li>
+                        <li><i class="fas fa-envelope"></i> teancoffe100@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tea N Coffee. All rights reserved. | Designed with <i class="fas fa-heart"></i> in Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SHOPPING CART SIDEBAR ==================== -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">PKR 0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- ==================== BACK TO TOP BUTTON ==================== -->
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>
